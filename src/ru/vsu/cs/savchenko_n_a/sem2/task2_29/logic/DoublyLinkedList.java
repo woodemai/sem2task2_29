@@ -1,6 +1,30 @@
-package ru.vsu.cs.savchenko_n_a.sem2.task2_29;
+package ru.vsu.cs.savchenko_n_a.sem2.task2_29.logic;
 
 public class DoublyLinkedList {
+
+    /*
+    DoublyLinkedList имеет поля:
+    Node head - первый элемент
+    Node tail - последний элемент
+    int size - размер
+     */
+    private static class Node {
+        int data;
+        Node prev;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+        }
+    }
+
+    private Node head;
+    private Node tail;
+    private int size;
+
+    /*
+    Пустой стандартный конструктор и конструктор на основе массива целых чисел
+     */
     public DoublyLinkedList() {
     }
 
@@ -19,21 +43,9 @@ public class DoublyLinkedList {
         size = arr.length;
     }
 
-
-    private static class Node {
-        int data;
-        Node prev;
-        Node next;
-
-        Node(int data) {
-            this.data = data;
-        }
-    }
-
-    private Node head;
-    private Node tail;
-    private int size;
-
+    /*
+    добавление и удаления элемента
+     */
     public void add(int data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -65,13 +77,16 @@ public class DoublyLinkedList {
         size--;
     }
 
-    public void printList() {
+    @Override
+    public String toString() {
+        StringBuilder result = new StringBuilder();
         Node current = head;
         while (current != null) {
-            System.out.print(current.data + " ");
+            result.append(current.data).append(" ");
             current = current.next;
         }
-        System.out.println();
+        result.append("\n");
+        return result.toString();
     }
 
     public void reverse() {

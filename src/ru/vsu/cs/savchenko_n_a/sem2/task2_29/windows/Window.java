@@ -1,5 +1,7 @@
-package ru.vsu.cs.savchenko_n_a.sem2.task2_29;
+package ru.vsu.cs.savchenko_n_a.sem2.task2_29.windows;
 
+import ru.vsu.cs.savchenko_n_a.sem2.task2_29.logic.DoublyLinkedList;
+import ru.vsu.cs.savchenko_n_a.sem2.task2_29.logic.Solution;
 import ru.vsu.cs.savchenko_n_a.sem2.task2_29.utils.JTableUtils;
 
 import javax.swing.*;
@@ -16,6 +18,9 @@ public class Window extends JFrame{
     private JButton buttonExecute;
     private JTable tableOutput;
     private JPanel panel;
+    private JScrollPane paneOutput;
+    private JScrollPane paneInput;
+
     public Window() {
         setTitle("task2_29");
         setContentPane(panel);
@@ -31,8 +36,8 @@ public class Window extends JFrame{
         FileFilter filter = new FileNameExtensionFilter("Text files", "txt");
         fileChooser.addChoosableFileFilter(filter);
 
-        JTableUtils.initJTableForArray(tableInput, 50, false, false, false, false);
-        JTableUtils.initJTableForArray(tableOutput, 50, false, false, false, false);
+        JTableUtils.initJTableForArray(tableInput, 50, false, true, false, true);
+        JTableUtils.initJTableForArray(tableOutput, 50, false, true, false, true);
 
         buttonInput.addActionListener(e -> {
             try {

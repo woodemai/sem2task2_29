@@ -1,4 +1,4 @@
-package ru.vsu.cs.savchenko_n_a.sem2.task2_29;
+package ru.vsu.cs.savchenko_n_a.sem2.task2_29.logic;
 
 import java.io.*;
 import java.nio.file.Path;

@@ -1,4 +1,6 @@
-package ru.vsu.cs.savchenko_n_a.sem2.task2_29;
+package ru.vsu.cs.savchenko_n_a.sem2.task2_29.logic;
+
+import ru.vsu.cs.savchenko_n_a.sem2.task2_29.windows.Window;
 
 import java.io.PrintStream;
 import javax.swing.*;
