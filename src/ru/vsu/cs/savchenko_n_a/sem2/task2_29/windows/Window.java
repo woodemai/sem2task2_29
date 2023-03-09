@@ -18,8 +18,6 @@ public class Window extends JFrame{
     private JButton buttonExecute;
     private JTable tableOutput;
     private JPanel panel;
-    private JScrollPane paneOutput;
-    private JScrollPane paneInput;
 
     public Window() {
         setTitle("task2_29");
