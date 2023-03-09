@@ -1,3 +1,5 @@
+package ru.vsu.cs.savchenko_n_a.sem2.task2_29.utils;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;

@@ -1,3 +1,5 @@
+package ru.vsu.cs.savchenko_n_a.sem2.task2_29;
+
 import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;

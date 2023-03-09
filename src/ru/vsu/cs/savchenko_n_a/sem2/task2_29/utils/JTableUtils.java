@@ -1,3 +1,5 @@
+package ru.vsu.cs.savchenko_n_a.sem2.task2_29.utils;
+
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.table.DefaultTableCellRenderer;

@@ -1,6 +1,9 @@
-import java.util.*;
+package ru.vsu.cs.savchenko_n_a.sem2.task2_29;
 
 public class DoublyLinkedList {
+    public DoublyLinkedList() {
+    }
+
     public DoublyLinkedList(int[] arr) {
         if (arr.length > 0) {
             this.head = new Node(arr[0]);
@@ -13,6 +16,7 @@ public class DoublyLinkedList {
             }
             this.tail = current;
         }
+        size = arr.length;
     }
 
 
@@ -28,6 +32,7 @@ public class DoublyLinkedList {
 
     private Node head;
     private Node tail;
+    private int size;
 
     public void add(int data) {
         Node newNode = new Node(data);
@@ -39,6 +44,25 @@ public class DoublyLinkedList {
             newNode.prev = tail;
             tail = newNode;
         }
+        size++;
+    }
+
+    public void remove(int data) {
+        Node current = head;
+        Node previous;
+        Node next;
+        for (int i = 1; i < size; i++) {
+            assert current != null;
+            previous = current.prev;
+            next = current.next;
+            if (current.data == data) {
+                next.prev = previous;
+                previous.next = next;
+                current = null;
+            }
+        }
+        this.tail = current;
+        size--;
     }
 
     public void printList() {
@@ -52,7 +76,7 @@ public class DoublyLinkedList {
 
     public void reverse() {
         Node current = head;
-        Node temp = null;
+        Node temp;
 
         temp = head;
         head = tail;
@@ -65,18 +89,9 @@ public class DoublyLinkedList {
             current = current.prev;
         }
     }
-    public int size() {
-        int size = 0;
-        Node current = head;
-        while (current != null) {
-            size++;
-            current = current.next;
-        }
-        return size;
-    }
 
     public int[] toArray() {
-        int[] arr = new int[size()];
+        int[] arr = new int[size];
         Node current = head;
         int i = 0;
         while (current != null) {
@@ -86,5 +101,4 @@ public class DoublyLinkedList {
         }
         return arr;
     }
-
 }

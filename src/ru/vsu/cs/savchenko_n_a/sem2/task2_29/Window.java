@@ -1,3 +1,7 @@
+package ru.vsu.cs.savchenko_n_a.sem2.task2_29;
+
+import ru.vsu.cs.savchenko_n_a.sem2.task2_29.utils.JTableUtils;
+
 import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
