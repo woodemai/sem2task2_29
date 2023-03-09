@@ -59,12 +59,13 @@ public class Window extends JFrame{
             }
         });
         buttonExecute.addActionListener(e -> {
-            int[] arr = new int[0];
+            int[] arr;
             try {
                 arr = JTableUtils.readIntArrayFromJTable(tableInput);
             } catch (ParseException ex) {
                 throw new RuntimeException(ex);
             }
+            assert arr != null;
             DoublyLinkedList linkedList = new DoublyLinkedList(arr);
             linkedList.reverse();
             arr  = linkedList.toArray();
